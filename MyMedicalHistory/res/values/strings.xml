@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Medical History</string>
+    <string name="title_activity_tree">TreeActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="TreeScreenInstruction">Tab to view details</string>
+    <string name="TreeScreenGrandFather">Grandfather</string>
+    <string name="TreeScreenGrandMother">Grandmother</string>
+    <string name="TreeScreenFather">Father</string>
+    <string name="TreeScreenMother">Mother</string>
+    <string name="TreeScreenSibling1">Sibling1</string>
+    <string name="TreeScreenSibling2">Sibling2</string>
+    <string name="TreeScreenYou">You</string>
+    <string name="TreeScreenSibling3">Sibling3</string>
+    <string name="TreeScreenSibling4">Sibling4</string>
+    <string name="TreeScreenEditButton">Edit</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="DetailsPageHeader">Grandfather\'s Details</string>
+    <string name="DetailsPageFirstCondition">First Condition</string>
+    <string name="DetailsPageFirstConditionField">High blood pressure</string>
+    <string name="DetailsPageDate">Date</string>
+    <string name="DetailsPageRemarksLabel">Remarks</string>
+    <string name="DetailsPageFirstConditionDateField">06/25/1992</string>
+    <string name="DetailsPageFirstConditionRemarksField">None</string>
+    <string name="DetailsPageSecondConditionField">Heart attack</string>
+    <string name="DetailsPageSecondConditionDateField">09/18/1998</string>
+    <string name="DetailsPageSecondConditionRemarksField">Recovery took 3 months</string>
+    <string name="title_activity_add_remove">AddRemoveActivity</string>
+    <string name="title_activity_add_new_condition">AddNewConditionActivity</string>
+
+</resources>
