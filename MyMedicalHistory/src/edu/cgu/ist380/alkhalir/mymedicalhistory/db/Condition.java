@@ -1,11 +1,9 @@
 package edu.cgu.ist380.alkhalir.mymedicalhistory.db;
 
-import java.util.Date;
-
 public class Condition {
 	private int id;
 	private String description;
-	private Date dateAcquired;
+	private String dateAcquired;
 	private String remarks;
 	private int personId;
 	
@@ -27,10 +25,10 @@ public class Condition {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Date getDateAcquired() {
+	public String getDateAcquired() {
 		return dateAcquired;
 	}
-	public void setDateAcquired(Date dateAcquired) {
+	public void setDateAcquired(String dateAcquired) {
 		this.dateAcquired = dateAcquired;
 	}
 	public String getRemarks() {
