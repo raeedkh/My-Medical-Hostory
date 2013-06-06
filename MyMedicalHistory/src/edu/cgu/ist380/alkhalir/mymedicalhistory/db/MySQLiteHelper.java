@@ -8,18 +8,19 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	
 	private static final String DATABASE_NAME="MyMedicalHistory.db";
 	private static final int DATABASE_VERSION=1;
-	private static final String TABLE_PERSON="person";
-	private static final String PERSON_COLUMN_ID="_id";		
-	private static final String PERSON_COLUMN_FIRSTNAME="first_name";
-	private static final String PERSON_COLUMN_LASTNAEM="last_name";
-	private static final String PERSON_COLUMN_RELATIONSHIP="relationship";
+	public static final String TABLE_PERSON="person";
+	public static final String PERSON_COLUMN_ID="_id";		
+	public static final String PERSON_COLUMN_FIRSTNAME="first_name";
+	public static final String PERSON_COLUMN_LASTNAEM="last_name";
+	public static final String PERSON_COLUMN_RELATIONSHIP="relationship";
 	
-	private static final String TABLE_CONDITION="condition";
-	private static final String CONDITION_COLUMN_ID="_id";
-	private static final String CONDITION_COLUMN_DESCRIPTION="description";
-	private static final String CONDITION_COLUMN_DATEACQUIRED="date_acquired";
-	private static final String CONDITION_COLUMN_REMARKS="remarks";
-	private static final String CONDITION_COLUMN_PERSONID="person_id";
+	public static final String TABLE_CONDITION="condition";
+	public static final String CONDITION_COLUMN_ID="_id";
+	public static final String CONDITION_COLUMN_DESCRIPTION="description";
+	public static final String CONDITION_COLUMN_DATEACQUIRED="date_acquired";
+	public static final String CONDITION_COLUMN_REMARKS="remarks";
+	public static final String CONDITION_COLUMN_PERSONID="person_id";
+	
 	
 	private static final String DATABASE_CREATE_TABLE_PERSON = "create table " + TABLE_PERSON
 			+ "(" 
@@ -29,7 +30,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 			+ PERSON_COLUMN_RELATIONSHIP + " text not null,"
 			+ ")";
 	
-	private static final String DATABASE_CREATE_TABLE_CONDITION = "create table " + TABLE_PERSON
+	private static final String DATABASE_CREATE_TABLE_CONDITION = "create table " + TABLE_CONDITION
 			+ "(" 
 			+ CONDITION_COLUMN_ID + " integer primary key autoincrement, "
 			+ CONDITION_COLUMN_DESCRIPTION + " text not null," 
@@ -40,7 +41,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	
 	public MySQLiteHelper(Context context)
 	{
-		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+		super(context, DATABASE_NAME, null, DATABASE_VERSION); 
 	}
 	
 	@Override
