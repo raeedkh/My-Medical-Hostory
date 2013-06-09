@@ -7,7 +7,22 @@ public class Person {
 	private String firstName;
 	private String lastName;
 	private String relationship;
-
+	private Date birthDate;
+	private String gender; 
+	
+	public Person()
+	{
+		
+	}
+	public Person(String firstName, String lastName, String gender,String relationship,
+			Date birthDate) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.setGender(gender);
+		this.relationship = relationship;
+		this.birthDate = birthDate;
+	}
 	public int getId() {
 		return id;
 	}
@@ -38,5 +53,11 @@ public class Person {
 	public void setRelationship(String relationship) {
 		this.relationship = relationship;
 	}
-	private Date birthDate;
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 }

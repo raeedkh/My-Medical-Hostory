@@ -29,5 +29,7 @@
     <string name="DetailsPageSecondConditionRemarksField">Recovery took 3 months</string>
     <string name="title_activity_add_remove">AddRemoveActivity</string>
     <string name="title_activity_add_new_condition">AddNewConditionActivity</string>
+    <string name="nameExample">John</string>
+    <string name="imageDesc">person icon</string>
 
 </resources>
