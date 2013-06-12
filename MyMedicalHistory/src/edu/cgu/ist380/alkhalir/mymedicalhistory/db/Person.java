@@ -60,6 +60,7 @@ public class Person {
 		this.gender = gender;
 	}
 	
+	//Used to print person details.
 	public String toString()
 	{
 		return "Person ID: "+this.getId()+
