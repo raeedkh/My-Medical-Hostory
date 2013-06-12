@@ -7,6 +7,7 @@
     android:layout_height="fill_parent"
     >
     <LinearLayout  
+    android:id="@+id/personsContainer"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="16dp"
@@ -19,10 +20,12 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp" />
+        
         <!--  first row  -->
+        <!-- 
         <RelativeLayout
 		    android:layout_width="fill_parent"
-		     android:layout_marginTop="20dip"
+		    android:layout_marginTop="20dip"
 		    android:layout_height="wrap_content"
 		    android:orientation="horizontal" >
 
@@ -40,8 +43,10 @@
             android:layout_height="wrap_content" />		
             
    		</RelativeLayout>
+   		-->
 
         <!--  second row  -->
+        <!-- 
         <RelativeLayout
 		    android:layout_width="fill_parent"
 		    android:layout_height="wrap_content"
@@ -69,17 +74,37 @@
              android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />	
-                       
+		 	 <fragment android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.PersonFragment"
+            android:id="@+id/siblingFragment"   
+             android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />	
+		
+		 	 
    		</RelativeLayout>
-       
- 		
-           
-          
-            
-   		      
+       --> 	 
+<GridLayout
+		android:id="@+id/topGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-    
-        
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+
+        android:columnCount="2"
+        >
+        </GridLayout>
+<GridLayout
+		android:id="@+id/bottomGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+
+        android:columnCount="2"
+        >
+        </GridLayout>
 
 </LinearLayout>
   </ScrollView>  

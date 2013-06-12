@@ -5,7 +5,7 @@
     <string name="title_activity_tree">TreeActivity</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="TreeScreenInstruction">Tab to view details</string>
+    <string name="TreeScreenInstruction">Tab a person to view his details:</string>
     <string name="TreeScreenGrandFather">Grandfather</string>
     <string name="TreeScreenGrandMother">Grandmother</string>
     <string name="TreeScreenFather">Father</string>
@@ -31,5 +31,6 @@
     <string name="title_activity_add_new_condition">AddNewConditionActivity</string>
     <string name="nameExample">John</string>
     <string name="imageDesc">person icon</string>
+    <string name="TreeScreenNoPersonsMsg">No Information to be displayed! Click on Add Person</string>
 
 </resources>

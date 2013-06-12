@@ -28,6 +28,7 @@ public class PersonFragment extends Fragment {
 	  public void setPerson( Person person1) {
 		  final Person  person= person1;
 		  TextView personName = (TextView) getView().findViewById(R.id.personName);
+
 		   TextView personRelation = (TextView) getView().findViewById(R.id.personRelation);
 		  // change the icon if you fragment
 		  if(person.getRelationship().equalsIgnoreCase("you"))
