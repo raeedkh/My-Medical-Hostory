@@ -27,23 +27,21 @@ public final class R {
         public static final int person=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f08002a;
+        public static final int action_settings=0x7f080029;
         public static final int button1=0x7f08000e;
         public static final int button2=0x7f08000f;
         public static final int editText1=0x7f08000a;
         public static final int editText2=0x7f08000d;
+        public static final int fatherFragment=0x7f080023;
+        public static final int grandFatherFragment=0x7f080021;
+        public static final int grandMotherFragment=0x7f080022;
         public static final int imageButton1=0x7f080010;
         public static final int imageButton2=0x7f080011;
         public static final int imageButton3=0x7f080012;
-        public static final int imageViewFather=0x7f080023;
-        public static final int imageViewGrandfather=0x7f080021;
-        public static final int imageViewGrandmother=0x7f080022;
-        public static final int imageViewMother=0x7f080024;
-        public static final int imageViewSibling1=0x7f080025;
-        public static final int imageViewSibling2=0x7f080027;
-        public static final int imageViewSibling3=0x7f080028;
-        public static final int imageViewSibling4=0x7f080029;
-        public static final int imageViewYou=0x7f080026;
+        public static final int motherFragment=0x7f080025;
+        public static final int personImage=0x7f080026;
+        public static final int personName=0x7f080028;
+        public static final int personRelation=0x7f080027;
         public static final int spinner1=0x7f080004;
         public static final int spinner2=0x7f080007;
         public static final int tableRow1=0x7f080000;
@@ -70,12 +68,14 @@ public final class R {
         public static final int textViewSecondConditionLabel=0x7f080019;
         public static final int textViewSecondConditionRemarksField=0x7f080020;
         public static final int textViewSecondConditionRemarksLabel=0x7f08001f;
+        public static final int youFragment=0x7f080024;
     }
     public static final class layout {
         public static final int activity_add_new_condition=0x7f030000;
         public static final int activity_add_remove=0x7f030001;
         public static final int activity_details=0x7f030002;
         public static final int activity_tree=0x7f030003;
+        public static final int person_fragment=0x7f030004;
     }
     public static final class menu {
         public static final int add_new_condition=0x7f070000;
@@ -108,6 +108,8 @@ public final class R {
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050003;
+        public static final int imageDesc=0x7f05001d;
+        public static final int nameExample=0x7f05001c;
         public static final int title_activity_add_new_condition=0x7f05001b;
         public static final int title_activity_add_remove=0x7f05001a;
         public static final int title_activity_details=0x7f05000f;

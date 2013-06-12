@@ -59,5 +59,14 @@ public class Person {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
+	
+	public String toString()
+	{
+		return "Person ID: "+this.getId()+
+				"; First Name: "+this.getFirstName()+
+				"; Last Name: "+this.getLastName()+
+				"; Birth Date: "+this.getBirthDate()+
+				"; Gender: "+this.getGender()+
+				"; Relationship: "+this.getRelationship();
+	}
 }
