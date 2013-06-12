@@ -1,13 +1,11 @@
 package edu.cgu.ist380.alkhalir.mymedicalhistory.db;
 
-import java.util.Date;
-
 public class Person {
 	private int id;
 	private String firstName;
 	private String lastName;
 	private String relationship;
-	private Date birthDate;
+	private String birthDate;
 	private String gender; 
 	
 	public Person()
@@ -15,7 +13,7 @@ public class Person {
 		
 	}
 	public Person(String firstName, String lastName, String gender,String relationship,
-			Date birthDate) {
+			String birthDate) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -41,10 +39,10 @@ public class Person {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public Date getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 	public String getRelationship() {

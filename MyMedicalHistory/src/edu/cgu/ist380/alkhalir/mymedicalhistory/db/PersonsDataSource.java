@@ -16,8 +16,10 @@ public class PersonsDataSource {
 	private String[] allColumns= {
 			MySQLiteHelper.PERSON_COLUMN_ID,
 			MySQLiteHelper.PERSON_COLUMN_FIRSTNAME,
-			MySQLiteHelper.PERSON_COLUMN_LASTNAEM,
-			MySQLiteHelper.PERSON_COLUMN_RELATIONSHIP
+			MySQLiteHelper.PERSON_COLUMN_LASTNAME,
+			MySQLiteHelper.PERSON_COLUMN_RELATIONSHIP,
+			MySQLiteHelper.PERSON_COLUMN_BIRTHDATE,
+			MySQLiteHelper.PERSON_COLUMN_GENDER
 	};
 	
 	public PersonsDataSource(Context context){
@@ -44,8 +46,10 @@ public class PersonsDataSource {
 		ContentValues values = new ContentValues();
 		
 		values.put(MySQLiteHelper.PERSON_COLUMN_FIRSTNAME, person.getFirstName());
-		values.put(MySQLiteHelper.PERSON_COLUMN_LASTNAEM, person.getLastName());
+		values.put(MySQLiteHelper.PERSON_COLUMN_LASTNAME, person.getLastName());
 		values.put(MySQLiteHelper.PERSON_COLUMN_RELATIONSHIP, person.getRelationship());
+		values.put(MySQLiteHelper.PERSON_COLUMN_BIRTHDATE, person.getBirthDate());
+		values.put(MySQLiteHelper.PERSON_COLUMN_GENDER,  person.getGender());
 		
 		long insertedId= database.insert(MySQLiteHelper.TABLE_PERSON, null, values);
 		person.setId((int) insertedId);
@@ -60,7 +64,7 @@ public class PersonsDataSource {
 		    Log.i(PersonsDataSource.class.getName(), "Record : Person with id:" + person.getId() +" was deleted from the DB.");		
 	}
 	
-	public List<Person> getAllMeds() {
+	public List<Person> getAllPersons() {
 		    List<Person> personsList = new ArrayList<Person>();
 	 
 	    Cursor cursor = database.query(MySQLiteHelper.TABLE_PERSON,
@@ -68,8 +72,8 @@ public class PersonsDataSource {
 	 
 		cursor.moveToFirst();
 		    while (!cursor.isAfterLast()) {
-		      Person meds = cursorToPerson(cursor);
-		      personsList.add(meds);
+		      Person person = cursorToPerson(cursor);
+		      personsList.add(person);
 		      cursor.moveToNext();
 		    }
 		    // Make sure to close the cursor
@@ -82,12 +86,16 @@ public class PersonsDataSource {
 	    // get the values from the cursor 
 	    long id =  cursor.getLong(cursor.getColumnIndexOrThrow(MySQLiteHelper.PERSON_COLUMN_ID));
 	    String first_name=cursor.getString(cursor.getColumnIndexOrThrow(MySQLiteHelper.PERSON_COLUMN_FIRSTNAME));
-	    String last_name = cursor.getString(cursor.getColumnIndexOrThrow(MySQLiteHelper.PERSON_COLUMN_LASTNAEM));
+	    String last_name = cursor.getString(cursor.getColumnIndexOrThrow(MySQLiteHelper.PERSON_COLUMN_LASTNAME));
 	    String relationship = cursor.getString(cursor.getColumnIndexOrThrow(MySQLiteHelper.PERSON_COLUMN_RELATIONSHIP));
+	    String birth_date= cursor.getString(cursor.getColumnIndexOrThrow(MySQLiteHelper.PERSON_COLUMN_BIRTHDATE));
+	    String gender= cursor.getString(cursor.getColumnIndexOrThrow(MySQLiteHelper.PERSON_COLUMN_GENDER));
 	    person.setId((int) id);
 	    person.setFirstName(first_name);
 	    person.setLastName(last_name);
 	    person.setRelationship(relationship);
+	    person.setBirthDate(birth_date);
+	    person.setGender(gender);
 	    return person;
 	  }
 }

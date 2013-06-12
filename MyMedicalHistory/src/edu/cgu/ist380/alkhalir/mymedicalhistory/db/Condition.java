@@ -37,5 +37,13 @@ public class Condition {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
+	public String toString()
+	{
+		return "Condition ID: "+this.getId()+
+				"; Description: "+this.getDescription()+
+				"; Date Acquired: "+this.getDateAcquired()+
+				"; PersonID: "+this.getPersonId()+
+				"; Remarks: "+this.getRemarks();
+	}	
 	
 }

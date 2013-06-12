@@ -44,7 +44,7 @@ public class PersonFragment extends Fragment {
 					 i.putExtra("relationship", person.getRelationship());
 					 i.putExtra("gender", person.getGender());
 					 i.putExtra("id", person.getId()+"");
-					 i.putExtra("birthday", (person.getBirthDate() !=null) ? person.getBirthDate().getTime() : "");
+					 i.putExtra("birthday", (person.getBirthDate() !=null) ? person.getBirthDate() : "");
 					 i.setClassName(context, "edu.cgu.ist380.alkhalir.mymedicalhistory.DetailsActivity");
 					 context.startActivity(i);
 				}

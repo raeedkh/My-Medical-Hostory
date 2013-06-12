@@ -62,7 +62,7 @@ public class ConditionsDataSource {
 		    Log.i(ConditionsDataSource.class.getName(), "Record : Condition with id:" + condition.getId() +" was deleted from the DB.");		
 	}
 	
-	public List<Condition> getAllMeds() {
+	public List<Condition> getAllConditions() {
 		    List<Condition> conditionsList = new ArrayList<Condition>();
 	 
 	    Cursor cursor = database.query(MySQLiteHelper.TABLE_CONDITION,
