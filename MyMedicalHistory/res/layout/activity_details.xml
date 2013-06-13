@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:minHeight="35dp"
-                android:text="@string/TreeScreenEditButton"
+                android:text="@string/TreeScreenAddButton"
                 android:textSize="13sp" />
     </TableRow>
 </TableLayout>

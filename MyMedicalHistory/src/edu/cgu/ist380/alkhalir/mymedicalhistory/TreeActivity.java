@@ -5,6 +5,8 @@ import java.util.List;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable.Orientation;
 import android.os.Bundle;
@@ -12,7 +14,9 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -32,6 +36,7 @@ public class TreeActivity extends Activity {
 		
 		this.printDBtoLog();
 		LinearLayout personsContainerLineearLayout=(LinearLayout)this.findViewById(R.id.personsContainer);
+		LinearLayout meContainer=(LinearLayout)this.findViewById(R.id.meContainer);
 		GridLayout topGridLayout=(GridLayout)this.findViewById(R.id.topGridLayout);
 		GridLayout bottomGridLayout=(GridLayout)this.findViewById(R.id.bottomGridLayout);
 		
@@ -49,7 +54,14 @@ public class TreeActivity extends Activity {
 		}
 		else
 		{
-
+			ImageView meImageView =new ImageView(this);				
+			TextView meTextViewName=new TextView(this);
+			meTextViewName.setGravity(Gravity.CENTER_HORIZONTAL);
+			meImageView.setImageResource(R.drawable.person);
+			meTextViewName.setText("Me");
+			meContainer.addView(meImageView);
+			meContainer.addView(meTextViewName);
+			
 			int i=0;
 			
 			Space space=new Space(this);			
@@ -150,6 +162,18 @@ public class TreeActivity extends Activity {
 //		fatherFrag.setPerson(father);
 		
 		personsDS.close();
+		
+		Button btnAddNewPerson=(Button)findViewById(R.id.btnAddNewPerson);
+		final Context context=this;
+		btnAddNewPerson.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent();
+				intent.setClassName(context, "edu.cgu.ist380.alkhalir.mymedicalhistory.AddNewPersonActivity");
+				context.startActivity(intent);
+			}
+		});
 	}
 
 	@Override
@@ -206,26 +230,34 @@ public class TreeActivity extends Activity {
 		Log.i(this.getClass().getName(), "Condition DB is: "+ conditionDS);		
 		
 		Person testPerson=new Person();
-		testPerson.setBirthDate("04/15/1937");
-		testPerson.setFirstName("Jinnefer");
-		testPerson.setLastName("Hopkins");
-		testPerson.setRelationship("Grandmother");
-		testPerson.setGender("Female");
+		testPerson.setBirthDate("04/15/1990");
+		testPerson.setFirstName("Smith");
+		testPerson.setLastName("Junior");
+		testPerson.setRelationship("Sibling");
+		testPerson.setGender("Male");
 		testPerson=personDS.createPerson(testPerson);			
 		
 		Condition testCondition=new Condition();
 		testCondition.setDateAcquired("06/03/2005");
-		testCondition.setDescription("Diabeties");
+		testCondition.setDescription("Autism");
 		testCondition.setPersonId(testPerson.getId());
-		testCondition.setRemarks("Very mild");
+		testCondition.setRemarks("");
 		testCondition=conditionDS.createCondition(testCondition);
 
 		testPerson=new Person();
-		testPerson.setBirthDate("04/15/1944");
-		testPerson.setFirstName("James");
-		testPerson.setLastName("Bond");
-		testPerson.setRelationship("Grandfather");
-		testPerson.setGender("Male");
+		testPerson.setBirthDate("04/15/1995");
+		testPerson.setFirstName("Laura");
+		testPerson.setLastName("Smith");
+		testPerson.setRelationship("Sibling");
+		testPerson.setGender("Female");
+		testPerson=personDS.createPerson(testPerson);
+
+		testPerson=new Person();
+		testPerson.setBirthDate("02/15/1996");
+		testPerson.setFirstName("Jessica");
+		testPerson.setLastName("Johnson");
+		testPerson.setRelationship("Sibling");
+		testPerson.setGender("Female");
 		testPerson=personDS.createPerson(testPerson);
 
 

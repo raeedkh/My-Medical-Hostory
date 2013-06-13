@@ -8,6 +8,9 @@
 package edu.cgu.ist380.alkhalir.mymedicalhistory;
 
 public final class R {
+    public static final class array {
+        public static final int relationship_type=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -27,60 +30,67 @@ public final class R {
         public static final int person=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f080028;
-        public static final int bottomGridLayout=0x7f080023;
-        public static final int button1=0x7f08000e;
-        public static final int button2=0x7f08000f;
-        public static final int editText1=0x7f08000a;
-        public static final int editText2=0x7f08000d;
-        public static final int imageButton1=0x7f080010;
-        public static final int imageButton2=0x7f080011;
-        public static final int imageButton3=0x7f080012;
-        public static final int linearLayout=0x7f080024;
-        public static final int personImage=0x7f080025;
-        public static final int personName=0x7f080027;
-        public static final int personRelation=0x7f080026;
-        public static final int personsContainer=0x7f080021;
-        public static final int spinner1=0x7f080004;
-        public static final int spinner2=0x7f080007;
-        public static final int tableRow1=0x7f080000;
-        public static final int tableRow2=0x7f080002;
-        public static final int tableRow3=0x7f080005;
-        public static final int tableRow4=0x7f080008;
-        public static final int tableRow5=0x7f08000b;
-        public static final int tableRow6=0x7f08001b;
-        public static final int tableRow7=0x7f08001e;
-        public static final int textView1=0x7f080003;
-        public static final int textView2=0x7f080006;
-        public static final int textView3=0x7f080009;
-        public static final int textView4=0x7f08000c;
-        public static final int textViewDetailsPageHeader=0x7f080001;
-        public static final int textViewFirstConditionDateField=0x7f080016;
-        public static final int textViewFirstConditionDateLabel=0x7f080015;
-        public static final int textViewFirstConditionField=0x7f080014;
-        public static final int textViewFirstConditionLabel=0x7f080013;
-        public static final int textViewFirstConditionRemarksField=0x7f080018;
-        public static final int textViewFirstConditionRemarksLabel=0x7f080017;
-        public static final int textViewSecondConditionDateField=0x7f08001d;
-        public static final int textViewSecondConditionDateLabel=0x7f08001c;
-        public static final int textViewSecondConditionField=0x7f08001a;
-        public static final int textViewSecondConditionLabel=0x7f080019;
-        public static final int textViewSecondConditionRemarksField=0x7f080020;
-        public static final int textViewSecondConditionRemarksLabel=0x7f08001f;
-        public static final int topGridLayout=0x7f080022;
+        public static final int action_settings=0x7f09002d;
+        public static final int bottomGridLayout=0x7f090027;
+        public static final int btnAddNewPerson=0x7f090028;
+        public static final int button1=0x7f09000e;
+        public static final int button2=0x7f09000f;
+        public static final int editText1=0x7f09000a;
+        public static final int editText2=0x7f09000d;
+        public static final int imageButton1=0x7f090013;
+        public static final int imageButton2=0x7f090014;
+        public static final int imageButton3=0x7f090015;
+        public static final int linearLayout=0x7f090029;
+        public static final int meContainer=0x7f090026;
+        public static final int personImage=0x7f09002a;
+        public static final int personName=0x7f09002c;
+        public static final int personRelation=0x7f09002b;
+        public static final int personsContainer=0x7f090024;
+        public static final int radio0=0x7f090011;
+        public static final int radio1=0x7f090012;
+        public static final int radioGroup1=0x7f090010;
+        public static final int spinner1=0x7f090004;
+        public static final int spinner2=0x7f090007;
+        public static final int tableRow1=0x7f090000;
+        public static final int tableRow2=0x7f090002;
+        public static final int tableRow3=0x7f090005;
+        public static final int tableRow4=0x7f090008;
+        public static final int tableRow5=0x7f09000b;
+        public static final int tableRow6=0x7f09001e;
+        public static final int tableRow7=0x7f090021;
+        public static final int textView1=0x7f090003;
+        public static final int textView2=0x7f090006;
+        public static final int textView3=0x7f090009;
+        public static final int textView4=0x7f09000c;
+        public static final int textViewDetailsPageHeader=0x7f090001;
+        public static final int textViewFirstConditionDateField=0x7f090019;
+        public static final int textViewFirstConditionDateLabel=0x7f090018;
+        public static final int textViewFirstConditionField=0x7f090017;
+        public static final int textViewFirstConditionLabel=0x7f090016;
+        public static final int textViewFirstConditionRemarksField=0x7f09001b;
+        public static final int textViewFirstConditionRemarksLabel=0x7f09001a;
+        public static final int textViewSecondConditionDateField=0x7f090020;
+        public static final int textViewSecondConditionDateLabel=0x7f09001f;
+        public static final int textViewSecondConditionField=0x7f09001d;
+        public static final int textViewSecondConditionLabel=0x7f09001c;
+        public static final int textViewSecondConditionRemarksField=0x7f090023;
+        public static final int textViewSecondConditionRemarksLabel=0x7f090022;
+        public static final int topGridLayout=0x7f090025;
     }
     public static final class layout {
         public static final int activity_add_new_condition=0x7f030000;
-        public static final int activity_add_remove=0x7f030001;
-        public static final int activity_details=0x7f030002;
-        public static final int activity_tree=0x7f030003;
-        public static final int person_fragment=0x7f030004;
+        public static final int activity_add_new_person=0x7f030001;
+        public static final int activity_add_remove=0x7f030002;
+        public static final int activity_details=0x7f030003;
+        public static final int activity_tree=0x7f030004;
+        public static final int person_fragment=0x7f030005;
     }
     public static final class menu {
-        public static final int add_new_condition=0x7f070000;
-        public static final int add_remove=0x7f070001;
-        public static final int details=0x7f070002;
-        public static final int tree=0x7f070003;
+        public static final int add_new_condition=0x7f080000;
+        public static final int add_new_person=0x7f080001;
+        public static final int add_remove=0x7f080002;
+        public static final int details=0x7f080003;
+        public static final int tree=0x7f080004;
     }
     public static final class string {
         public static final int DetailsPageDate=0x7f050013;
@@ -93,7 +103,7 @@ public final class R {
         public static final int DetailsPageSecondConditionDateField=0x7f050018;
         public static final int DetailsPageSecondConditionField=0x7f050017;
         public static final int DetailsPageSecondConditionRemarksField=0x7f050019;
-        public static final int TreeScreenEditButton=0x7f05000e;
+        public static final int TreeScreenAddButton=0x7f05000e;
         public static final int TreeScreenFather=0x7f050007;
         public static final int TreeScreenGrandFather=0x7f050005;
         public static final int TreeScreenGrandMother=0x7f050006;
@@ -110,7 +120,9 @@ public final class R {
         public static final int hello_world=0x7f050003;
         public static final int imageDesc=0x7f05001d;
         public static final int nameExample=0x7f05001c;
+        public static final int relationship_prompt=0x7f050020;
         public static final int title_activity_add_new_condition=0x7f05001b;
+        public static final int title_activity_add_new_person=0x7f05001f;
         public static final int title_activity_add_remove=0x7f05001a;
         public static final int title_activity_details=0x7f05000f;
         public static final int title_activity_tree=0x7f050001;
@@ -137,10 +149,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

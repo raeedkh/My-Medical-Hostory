@@ -34,6 +34,10 @@
             android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.AddNewConditionActivity"
             android:label="@string/title_activity_add_new_condition" >
         </activity>
+        <activity
+            android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.AddNewPersonActivity"
+            android:label="@string/title_activity_add_new_person" >
+        </activity>
     </application>
 
 </manifest>

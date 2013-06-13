@@ -15,7 +15,7 @@
     <string name="TreeScreenYou">You</string>
     <string name="TreeScreenSibling3">Sibling3</string>
     <string name="TreeScreenSibling4">Sibling4</string>
-    <string name="TreeScreenEditButton">Edit</string>
+    <string name="TreeScreenAddButton">Add Person</string>
     <string name="title_activity_details">DetailsActivity</string>
     <string name="DetailsPageHeader">Grandfather\'s Details</string>
     <string name="DetailsPageFirstCondition">First Condition</string>
@@ -32,5 +32,14 @@
     <string name="nameExample">John</string>
     <string name="imageDesc">person icon</string>
     <string name="TreeScreenNoPersonsMsg">No Information to be displayed! Click on Add Person</string>
+    <string name="title_activity_add_new_person">Add a new person</string>
+    <string-array name="relationship_type">
+        <item>Grandfather</item>
+        <item>Grandmother</item>
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Sibling</item>
+    </string-array>
+    <string name="relationship_prompt">Select a relationship</string>
 
 </resources>

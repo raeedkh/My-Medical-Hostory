@@ -92,6 +92,14 @@
         android:columnCount="2"
         >
         </GridLayout>
+    <LinearLayout  
+	    android:id="@+id/meContainer"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="16dp"
+	    android:paddingRight="16dp"
+	    android:orientation="vertical" >
+	    </LinearLayout>        
 <GridLayout
 		android:id="@+id/bottomGridLayout"
         android:layout_width="fill_parent"
@@ -104,13 +112,13 @@
         >
         </GridLayout>
         <Button
-                android:id="@+id/button1"
+                android:id="@+id/btnAddNewPerson"
                 android:layout_alignParentBottom="true"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:minHeight="35dp"
-                android:text="@string/TreeScreenEditButton"
+                android:text="@string/TreeScreenAddButton"
                 android:textSize="13sp" />
 </LinearLayout>
 
