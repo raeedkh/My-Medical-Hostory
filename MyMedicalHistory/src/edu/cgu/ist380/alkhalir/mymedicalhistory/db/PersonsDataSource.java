@@ -81,6 +81,47 @@ public class PersonsDataSource {
 		    return personsList;
 		  }
 	
+	public List<Person> sortList(List<Person> persons)
+	{
+		List<Person> resultList=new ArrayList<Person>();
+		List<Person> grandList=new ArrayList<Person>();
+		List<Person> nonGrandList=new ArrayList<Person>();
+		int i=0;
+		while (i<persons.size())
+		{
+			Person currentPerson=(Person)persons.get(i);
+			if (currentPerson.getRelationship().startsWith("Grand"))
+			{
+				grandList.add(currentPerson);
+			}
+			else
+			{
+				nonGrandList.add(currentPerson);
+			}			
+			i++;
+		}
+		resultList.addAll(grandList);
+		resultList.addAll(nonGrandList);
+		return resultList;
+	}
+	
+	public int getNumberOfGrands(List<Person> persons)
+	{
+		int numberOfGrands=0;
+		
+		int i=0;
+		while(i<persons.size())
+		{
+			if(persons.get(i).getRelationship().startsWith("Grand"))
+			{
+				numberOfGrands++;
+			}
+			i++;
+		}
+		
+		return numberOfGrands;
+	}
+	
 	private Person cursorToPerson(Cursor cursor) {
 	    Person person = new Person();
 	    // get the values from the cursor 

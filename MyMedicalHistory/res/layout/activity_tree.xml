@@ -1,8 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" >
 
-<ScrollView 
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
@@ -85,8 +83,8 @@
        --> 	 
 <GridLayout
 		android:id="@+id/topGridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
 
         android:useDefaultMargins="true"
         android:alignmentMode="alignBounds"
@@ -96,8 +94,8 @@
         </GridLayout>
 <GridLayout
 		android:id="@+id/bottomGridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
 
         android:useDefaultMargins="true"
         android:alignmentMode="alignBounds"
@@ -105,9 +103,6 @@
         android:columnCount="2"
         >
         </GridLayout>
-
-</LinearLayout>
-  </ScrollView>  
         <Button
                 android:id="@+id/button1"
                 android:layout_alignParentBottom="true"
@@ -117,4 +112,7 @@
                 android:minHeight="35dp"
                 android:text="@string/TreeScreenEditButton"
                 android:textSize="13sp" />
-        </RelativeLayout>
+</LinearLayout>
+
+                  </ScrollView>  
+        

@@ -9,12 +9,14 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable.Orientation;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Space;
 import android.widget.TextView;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Condition;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.ConditionsDataSource;
@@ -27,7 +29,8 @@ public class TreeActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tree);
-
+		
+		this.printDBtoLog();
 		LinearLayout personsContainerLineearLayout=(LinearLayout)this.findViewById(R.id.personsContainer);
 		GridLayout topGridLayout=(GridLayout)this.findViewById(R.id.topGridLayout);
 		GridLayout bottomGridLayout=(GridLayout)this.findViewById(R.id.bottomGridLayout);
@@ -35,6 +38,8 @@ public class TreeActivity extends Activity {
 		PersonsDataSource personsDS=new PersonsDataSource(this);
 		personsDS.open();
 		List<Person> persons=personsDS.getAllPersons();
+		persons=personsDS.sortList(persons);
+		int numberOfGrands=personsDS.getNumberOfGrands(persons);
 		
 		if (persons.isEmpty()){
 			TextView noPersonsTextView=new TextView(this);
@@ -46,14 +51,19 @@ public class TreeActivity extends Activity {
 		{
 
 			int i=0;
+			
+			Space space=new Space(this);			
+			
 			while(i<persons.size())
 			{
 				LinearLayout linearLayout=new LinearLayout(this);
 				linearLayout.setOrientation(LinearLayout.VERTICAL);
-				linearLayout.setLayoutParams(new LayoutParams(95, LayoutParams.FILL_PARENT));
-				ImageView imageView =new ImageView(this);
+				linearLayout.setLayoutParams(new LayoutParams(150, LayoutParams.FILL_PARENT));
+				ImageView imageView =new ImageView(this);				
 				TextView textViewName=new TextView(this);
+				textViewName.setGravity(Gravity.CENTER_HORIZONTAL);
 				TextView textViewRelationship=new TextView(this);
+				textViewRelationship.setGravity(Gravity.CENTER_HORIZONTAL);
 				Person person=persons.get(i);
 				if(person.getGender().equalsIgnoreCase("male"))
 				{
@@ -72,10 +82,19 @@ public class TreeActivity extends Activity {
 				if (relationship.startsWith("Grand")||relationship.equalsIgnoreCase("Father")||relationship.equalsIgnoreCase("Mother"))
 				{
 					topGridLayout.addView(linearLayout);
+					if(numberOfGrands%2!=0 && (numberOfGrands-1)==i)
+					{
+						topGridLayout.addView(space);
+					}
 				}
 				else
 				{
 					bottomGridLayout.addView(linearLayout);
+					if(numberOfGrands%2!=0 && (numberOfGrands-1)==i)
+					{
+						topGridLayout.addView(space);
+					}
+					
 				}
 
 				i++;
@@ -188,18 +207,27 @@ public class TreeActivity extends Activity {
 		
 		Person testPerson=new Person();
 		testPerson.setBirthDate("04/15/1937");
-		testPerson.setFirstName("Jenna");
-		testPerson.setLastName("Antony");
-		testPerson.setRelationship("Mother");
+		testPerson.setFirstName("Jinnefer");
+		testPerson.setLastName("Hopkins");
+		testPerson.setRelationship("Grandmother");
 		testPerson.setGender("Female");
-		testPerson=personDS.createPerson(testPerson);
+		testPerson=personDS.createPerson(testPerson);			
 		
 		Condition testCondition=new Condition();
 		testCondition.setDateAcquired("06/03/2005");
 		testCondition.setDescription("Diabeties");
 		testCondition.setPersonId(testPerson.getId());
 		testCondition.setRemarks("Very mild");
-		testCondition=conditionDS.createCondition(testCondition);		
+		testCondition=conditionDS.createCondition(testCondition);
+
+		testPerson=new Person();
+		testPerson.setBirthDate("04/15/1944");
+		testPerson.setFirstName("James");
+		testPerson.setLastName("Bond");
+		testPerson.setRelationship("Grandfather");
+		testPerson.setGender("Male");
+		testPerson=personDS.createPerson(testPerson);
+
 
 		personDS.close();
 		conditionDS.close();
