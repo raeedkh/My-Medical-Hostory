@@ -41,5 +41,6 @@
         <item>Sibling</item>
     </string-array>
     <string name="relationship_prompt">Select a relationship</string>
+    <string name="AddNewPersonScreenIncompleteInfoDialog">Please complete the required fields</string>
 
 </resources>

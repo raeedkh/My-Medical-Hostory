@@ -30,52 +30,54 @@ public final class R {
         public static final int person=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f09002d;
-        public static final int bottomGridLayout=0x7f090027;
-        public static final int btnAddNewPerson=0x7f090028;
+        public static final int action_settings=0x7f09002f;
+        public static final int bottomGridLayout=0x7f090025;
+        public static final int btnAdd=0x7f090018;
+        public static final int btnAddNewPerson=0x7f090026;
+        public static final int btnCancel=0x7f090017;
         public static final int button1=0x7f09000e;
         public static final int button2=0x7f09000f;
         public static final int editText1=0x7f09000a;
         public static final int editText2=0x7f09000d;
-        public static final int imageButton1=0x7f090013;
-        public static final int imageButton2=0x7f090014;
-        public static final int imageButton3=0x7f090015;
-        public static final int linearLayout=0x7f090029;
-        public static final int meContainer=0x7f090026;
-        public static final int personImage=0x7f09002a;
-        public static final int personName=0x7f09002c;
-        public static final int personRelation=0x7f09002b;
-        public static final int personsContainer=0x7f090024;
-        public static final int radio0=0x7f090011;
-        public static final int radio1=0x7f090012;
-        public static final int radioGroup1=0x7f090010;
+        public static final int editTextBirthdate=0x7f090013;
+        public static final int editTextFirstName=0x7f090010;
+        public static final int editTextLastName=0x7f090011;
+        public static final int imageButton1=0x7f090019;
+        public static final int imageButton2=0x7f09001a;
+        public static final int imageButton3=0x7f09001b;
+        public static final int imageButtonDelete=0x7f090029;
+        public static final int linearLayout=0x7f09002b;
+        public static final int listViewConditions=0x7f090021;
+        public static final int meContainer=0x7f090024;
+        public static final int personImage=0x7f09002c;
+        public static final int personName=0x7f09002e;
+        public static final int personRelation=0x7f09002d;
+        public static final int personsContainer=0x7f090022;
+        public static final int radioFemale=0x7f090016;
+        public static final int radioGrpGender=0x7f090014;
+        public static final int radioMale=0x7f090015;
         public static final int spinner1=0x7f090004;
         public static final int spinner2=0x7f090007;
+        public static final int spinnerRelationship=0x7f090012;
         public static final int tableRow1=0x7f090000;
         public static final int tableRow2=0x7f090002;
         public static final int tableRow3=0x7f090005;
         public static final int tableRow4=0x7f090008;
         public static final int tableRow5=0x7f09000b;
-        public static final int tableRow6=0x7f09001e;
-        public static final int tableRow7=0x7f090021;
         public static final int textView1=0x7f090003;
         public static final int textView2=0x7f090006;
         public static final int textView3=0x7f090009;
         public static final int textView4=0x7f09000c;
+        public static final int textViewBirthdate=0x7f09001e;
+        public static final int textViewConditionDescription=0x7f090028;
+        public static final int textViewDateAcquired=0x7f090027;
         public static final int textViewDetailsPageHeader=0x7f090001;
-        public static final int textViewFirstConditionDateField=0x7f090019;
-        public static final int textViewFirstConditionDateLabel=0x7f090018;
-        public static final int textViewFirstConditionField=0x7f090017;
-        public static final int textViewFirstConditionLabel=0x7f090016;
-        public static final int textViewFirstConditionRemarksField=0x7f09001b;
-        public static final int textViewFirstConditionRemarksLabel=0x7f09001a;
-        public static final int textViewSecondConditionDateField=0x7f090020;
-        public static final int textViewSecondConditionDateLabel=0x7f09001f;
-        public static final int textViewSecondConditionField=0x7f09001d;
-        public static final int textViewSecondConditionLabel=0x7f09001c;
-        public static final int textViewSecondConditionRemarksField=0x7f090023;
-        public static final int textViewSecondConditionRemarksLabel=0x7f090022;
-        public static final int topGridLayout=0x7f090025;
+        public static final int textViewGender=0x7f09001f;
+        public static final int textViewName=0x7f09001c;
+        public static final int textViewNoConditionsToDisplay=0x7f090020;
+        public static final int textViewRelationship=0x7f09001d;
+        public static final int textViewRemarks=0x7f09002a;
+        public static final int topGridLayout=0x7f090023;
     }
     public static final class layout {
         public static final int activity_add_new_condition=0x7f030000;
@@ -83,7 +85,8 @@ public final class R {
         public static final int activity_add_remove=0x7f030002;
         public static final int activity_details=0x7f030003;
         public static final int activity_tree=0x7f030004;
-        public static final int person_fragment=0x7f030005;
+        public static final int condition_row_view=0x7f030005;
+        public static final int person_fragment=0x7f030006;
     }
     public static final class menu {
         public static final int add_new_condition=0x7f080000;
@@ -93,6 +96,7 @@ public final class R {
         public static final int tree=0x7f080004;
     }
     public static final class string {
+        public static final int AddNewPersonScreenIncompleteInfoDialog=0x7f050021;
         public static final int DetailsPageDate=0x7f050013;
         public static final int DetailsPageFirstCondition=0x7f050011;
         public static final int DetailsPageFirstConditionDateField=0x7f050015;

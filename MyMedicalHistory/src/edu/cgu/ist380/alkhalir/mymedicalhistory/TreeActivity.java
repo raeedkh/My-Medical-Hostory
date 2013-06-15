@@ -28,11 +28,15 @@ import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Person;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.PersonsDataSource;
 
 public class TreeActivity extends Activity {
+	
+	private Context context;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tree);
+		
+		context=this;
 		
 		this.printDBtoLog();
 		LinearLayout personsContainerLineearLayout=(LinearLayout)this.findViewById(R.id.personsContainer);
@@ -50,7 +54,7 @@ public class TreeActivity extends Activity {
 			TextView noPersonsTextView=new TextView(this);
 			noPersonsTextView.setLayoutParams(new LayoutParams(-1, -1));
 			noPersonsTextView.setText(R.string.TreeScreenNoPersonsMsg);
-			personsContainerLineearLayout.addView(noPersonsTextView);
+			personsContainerLineearLayout.addView(noPersonsTextView,1);
 		}
 		else
 		{
@@ -87,6 +91,12 @@ public class TreeActivity extends Activity {
 				}
 				textViewName.setText(person.getFirstName());
 				textViewRelationship.setText(person.getRelationship());
+				imageView.setTag(person.getId());
+				textViewName.setTag(person.getId());
+				textViewRelationship.setTag(person.getId());
+				imageView.setOnClickListener(personClickedListener);
+				textViewName.setOnClickListener(personClickedListener);
+				textViewRelationship.setOnClickListener(personClickedListener);
 				linearLayout.addView(imageView);
 				linearLayout.addView(textViewRelationship);
 				linearLayout.addView(textViewName);
@@ -265,4 +275,18 @@ public class TreeActivity extends Activity {
 		conditionDS.close();
 		
 	}	
+	
+	private OnClickListener personClickedListener=new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			int i=Integer.parseInt(v.getTag().toString());
+			Log.i(this.getClass().getName(), "Clicked view tag: "+i);
+			Intent intent=new Intent();
+			intent.setClassName(context, "edu.cgu.ist380.alkhalir.mymedicalhistory.DetailsActivity");
+			intent.putExtra("personID", i);
+			context.startActivity(intent);
+		}
+	};
 }
