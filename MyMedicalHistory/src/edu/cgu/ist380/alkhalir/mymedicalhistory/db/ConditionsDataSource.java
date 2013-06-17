@@ -57,7 +57,7 @@ public class ConditionsDataSource {
 	
 	public void deleteCondition(Condition condition){
 		long id=condition.getId();
-	    database.delete(MySQLiteHelper.TABLE_CONDITION, MySQLiteHelper.TABLE_CONDITION
+	    database.delete(MySQLiteHelper.TABLE_CONDITION, MySQLiteHelper.CONDITION_COLUMN_ID
 		        + " = " + id, null);
 		    Log.i(ConditionsDataSource.class.getName(), "Record : Condition with id:" + condition.getId() +" was deleted from the DB.");		
 	}
@@ -78,7 +78,24 @@ public class ConditionsDataSource {
 		    cursor.close();
 		    return conditionsList;
 		  }
-	
+
+	public List<Condition> getConditionsForPersonId(int id) {
+	    List<Condition> conditionsList = new ArrayList<Condition>();
+ 
+    Cursor cursor = database.query(MySQLiteHelper.TABLE_CONDITION,
+	        allColumns, MySQLiteHelper.CONDITION_COLUMN_PERSONID+"="+id, null, null, null, null);
+ 
+	cursor.moveToFirst();
+	    while (!cursor.isAfterLast()) {
+	      Condition condition = cursorToCondition(cursor);
+	      conditionsList.add(condition);
+	      cursor.moveToNext();
+	    }
+	    // Make sure to close the cursor
+	    cursor.close();
+	    return conditionsList;
+	  }
+
 	private Condition cursorToCondition(Cursor cursor) {
 	    Condition condition = new Condition();
 	    // get the values from the cursor 

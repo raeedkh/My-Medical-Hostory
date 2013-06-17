@@ -25,21 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
     
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="5dp"
-        android:text="Relationship"
-         />
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"/>
-    
 	</TableRow>
     <TableRow
         android:id="@+id/tableRow3"
@@ -55,11 +40,11 @@
         android:text="Condition"
          />
 
-    <Spinner
-        android:id="@+id/spinner2"
+    <EditText
+        android:id="@+id/editTextCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"/>
+        android:ems="10" />
     
 	</TableRow>	
     <TableRow
@@ -77,14 +62,13 @@
          />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editTextDateAcquired"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="date"
         android:layout_gravity="left" >
 
-        <requestFocus />
     </EditText>
     
 	</TableRow>	
@@ -104,7 +88,7 @@
          />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextRemarks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -117,7 +101,7 @@
  	    android:layout_width="wrap_content"
  	    android:layout_height="wrap_content" >
     <Button
-                android:id="@+id/button1"
+                android:id="@+id/btnCancel"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -125,7 +109,7 @@
                 android:text="Cancel"
                 android:textSize="13sp" />     
     <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnAdd"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"

@@ -59,7 +59,7 @@ public class PersonsDataSource {
 	
 	public void deletePerson(Person person){
 		long id=person.getId();
-	    database.delete(MySQLiteHelper.TABLE_PERSON, MySQLiteHelper.TABLE_PERSON
+	    database.delete(MySQLiteHelper.TABLE_PERSON, MySQLiteHelper.PERSON_COLUMN_ID
 		        + " = " + id, null);
 		    Log.i(PersonsDataSource.class.getName(), "Record : Person with id:" + person.getId() +" was deleted from the DB.");		
 	}
@@ -80,7 +80,18 @@ public class PersonsDataSource {
 		    cursor.close();
 		    return personsList;
 		  }
-	
+
+	public Person getPersonById(int id) {
+		Person person=new Person();
+ 
+		Cursor cursor = database.query(MySQLiteHelper.TABLE_PERSON,
+	        allColumns, MySQLiteHelper.PERSON_COLUMN_ID+"='"+id+"'", null, null, null, null); 
+		cursor.moveToFirst();
+	    person = cursorToPerson(cursor);
+	    cursor.close();
+	    return person;
+	  }
+
 	public List<Person> sortList(List<Person> persons)
 	{
 		List<Person> resultList=new ArrayList<Person>();
