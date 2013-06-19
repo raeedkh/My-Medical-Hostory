@@ -32,6 +32,7 @@ public class DetailsActivity extends Activity {
 	private TextView txtViewNoConditionsToDisplay;
 	private Button btnAddNewCondition;
 	private Button btnDeletePerson;
+	private Button btnGoToMainScreen;
 	private int personId;
 	private PersonsDataSource personDS;
 	private ConditionsDataSource conditionsDS;
@@ -56,6 +57,7 @@ public class DetailsActivity extends Activity {
 		
 		Person person=personDS.getPersonById(personId);
 		List<Condition> conditionsList=conditionsDS.getConditionsForPersonId(personId);
+		Log.i(getClass().getName(), "List size for person ID:" +personId+" is "+ conditionsList.size());
 
 		txtViewName=(TextView)findViewById(R.id.textViewName);
 		txtViewBirthdate=(TextView)findViewById(R.id.textViewBirthdate);
@@ -63,6 +65,18 @@ public class DetailsActivity extends Activity {
 		txtViewRelationship=(TextView)findViewById(R.id.textViewRelationship);
 		btnAddNewCondition=(Button)findViewById(R.id.btnAddNewCondition);
 		btnDeletePerson=(Button)findViewById(R.id.btnDeletePerson);
+		btnGoToMainScreen=(Button)findViewById(R.id.btnGoToMainScreen);
+		
+		btnGoToMainScreen.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent();
+				intent.setClassName(context, "edu.cgu.ist380.alkhalir.mymedicalhistory.TreeActivity");				
+				context.startActivity(intent);				
+			}
+		});
 		
 		btnDeletePerson.setOnClickListener(new OnClickListener() {
 			

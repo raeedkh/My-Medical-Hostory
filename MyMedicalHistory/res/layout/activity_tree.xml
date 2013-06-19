@@ -95,10 +95,11 @@
     <LinearLayout  
 	    android:id="@+id/meContainer"
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
+	    android:layout_height="fill_parent"
 	    android:paddingLeft="16dp"
 	    android:paddingRight="16dp"
-	    android:orientation="vertical" >
+	    android:orientation="vertical" 
+	    android:gravity="center_horizontal">
 	    </LinearLayout>        
 <GridLayout
 		android:id="@+id/bottomGridLayout"
