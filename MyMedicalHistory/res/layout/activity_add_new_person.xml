@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="30dip"
+        android:paddingLeft="10dip"
         android:paddingRight="30dip" >
 
         <TextView
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="30dip"
+        android:paddingLeft="10dip"
         android:paddingRight="30dip" >
 
         <TextView
@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="30dip"
+        android:paddingLeft="10dip"
         android:paddingRight="30dip" >
 
         <TextView
@@ -65,11 +65,13 @@
 
 	    <Spinner
 	        android:id="@+id/spinnerRelationship"
-	        android:layout_width="match_parent"
+	        android:layout_width="0dip"
 	        android:layout_height="wrap_content"
 	        android:entries="@array/relationship_type"
 	        android:prompt="@string/relationship_prompt"
-	        android:spinnerMode="dialog"
+	        android:spinnerMode="dropdown"
+            android:layout_marginLeft="15dip"	
+            android:layout_weight="0.7"
 	         />
 
     </LinearLayout>
@@ -78,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="30dip"
+        android:paddingLeft="10dip"
         android:paddingRight="30dip" >
 
         <TextView
@@ -101,7 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="30dip"
+        android:paddingLeft="10dip"
         android:paddingRight="30dip" >
 
         <TextView
@@ -132,11 +134,13 @@
         </RadioGroup>
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="right"
         android:orientation="horizontal"
-        android:paddingLeft="30dip"
+        android:paddingLeft="10dip"
         android:paddingRight="30dip" >
    
     <Button
@@ -152,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="35dp"
                 android:text="Add"
-                android:textSize="13sp" />
+                android:textSize="13sp"/>
     
     </LinearLayout>
 

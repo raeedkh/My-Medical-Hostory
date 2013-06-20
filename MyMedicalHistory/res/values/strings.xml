@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">My Medical History</string>
-    <string name="title_activity_tree">TreeActivity</string>
+    <string name="title_activity_tree">My Medical History</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="TreeScreenInstruction">Tab a person to view his details:</string>
@@ -16,7 +16,7 @@
     <string name="TreeScreenSibling3">Sibling3</string>
     <string name="TreeScreenSibling4">Sibling4</string>
     <string name="TreeScreenAddButton">Add Person</string>
-    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_activity_details">Person Details</string>
     <string name="DetailsPageHeader">Grandfather\'s Details</string>
     <string name="DetailsPageFirstCondition">First Condition</string>
     <string name="DetailsPageFirstConditionField">High blood pressure</string>
@@ -28,11 +28,12 @@
     <string name="DetailsPageSecondConditionDateField">09/18/1998</string>
     <string name="DetailsPageSecondConditionRemarksField">Recovery took 3 months</string>
     <string name="title_activity_add_remove">AddRemoveActivity</string>
-    <string name="title_activity_add_new_condition">AddNewConditionActivity</string>
+    <string name="title_activity_add_new_condition">Add a new condition</string>
     <string name="nameExample">John</string>
     <string name="imageDesc">person icon</string>
-    <string name="TreeScreenNoPersonsMsg">No Information to be displayed! Click on Add Person</string>
+    <string name="TreeScreenNoPersonsMsg">No Information to display! Click on Add Person</string>
     <string name="title_activity_add_new_person">Add a new person</string>
+
     <string-array name="relationship_type">
         <item>Grandfather</item>
         <item>Grandmother</item>
@@ -40,7 +41,9 @@
         <item>Mother</item>
         <item>Sibling</item>
     </string-array>
+
     <string name="relationship_prompt">Select a relationship</string>
     <string name="AddNewPersonScreenIncompleteInfoDialog">Please complete the required fields</string>
+    <string name="title_activity_list_all_medical_conditions">All Medical Conditions</string>
 
 </resources>

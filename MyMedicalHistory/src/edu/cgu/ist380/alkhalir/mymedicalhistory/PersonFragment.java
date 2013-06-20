@@ -14,6 +14,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PersonFragment extends Fragment {
 	private LinearLayout linearLayoutPerson;

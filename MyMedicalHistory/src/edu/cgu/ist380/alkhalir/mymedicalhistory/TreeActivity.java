@@ -7,6 +7,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -23,19 +24,21 @@ import edu.cgu.ist380.alkhalir.mymedicalhistory.db.PersonsDataSource;
 
 public class TreeActivity extends Activity {
 	
-	private Context context;
 	private Bundle bundle;
 	private PersonFragment personFragment;
 	private FragmentTransaction fragmentTransaction;
 	private FragmentManager fragmentManager;
 	private String relationship;
+	private TextView textViewTreeScreenInstruction;
+	private Button btnViewAllConditions;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tree);
 		
-		context=this;
+		btnViewAllConditions=(Button)findViewById(R.id.btnViewAllConditions);
+
 		
 		this.printDBtoLog();
 		LinearLayout personsContainerLineearLayout=(LinearLayout)this.findViewById(R.id.personsContainer);
@@ -51,6 +54,8 @@ public class TreeActivity extends Activity {
 			noPersonsTextView.setLayoutParams(new LayoutParams(-1, -1));
 			noPersonsTextView.setText(R.string.TreeScreenNoPersonsMsg);
 			personsContainerLineearLayout.addView(noPersonsTextView,1);
+			textViewTreeScreenInstruction=(TextView)findViewById(R.id.textViewTreeScreenInstruction);
+			textViewTreeScreenInstruction.setVisibility(View.INVISIBLE);
 		}
 		else
 		{
@@ -63,7 +68,7 @@ public class TreeActivity extends Activity {
 			personFragment=new PersonFragment();
 			personFragment.setArguments(bundle);			
 			fragmentTransaction.add(R.id.meContainer, personFragment);
-
+			btnViewAllConditions.setVisibility(View.VISIBLE);
 			
 			int i=0;
 						
@@ -112,17 +117,28 @@ public class TreeActivity extends Activity {
 		personsDS.close();
 		
 		Button btnAddNewPerson=(Button)findViewById(R.id.btnAddNewPerson);
-		final Context context=this;
 		btnAddNewPerson.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				Context context=v.getContext();
 				Intent intent=new Intent();
 				intent.setClassName(context, "edu.cgu.ist380.alkhalir.mymedicalhistory.AddNewPersonActivity");
 				context.startActivity(intent);
 			}
 		});
 		
+		btnViewAllConditions.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Context context=v.getContext();
+				Intent intent=new Intent();
+				intent.setClassName(context, "edu.cgu.ist380.alkhalir.mymedicalhistory.ListAllMedicalConditionsActivity");
+				context.startActivity(intent);				
+			}
+		});
 
 		
 	}
@@ -222,6 +238,7 @@ public class TreeActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
+			Context context=v.getContext();
 			int i=Integer.parseInt(v.getTag().toString());
 			Log.i(this.getClass().getName(), "Clicked view tag: "+i);
 			Intent intent=new Intent();

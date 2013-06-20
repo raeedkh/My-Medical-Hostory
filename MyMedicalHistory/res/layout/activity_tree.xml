@@ -10,10 +10,12 @@
     android:layout_height="wrap_content"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
 
 
         <TextView
+            android:id="@+id/textViewTreeScreenInstruction"
             android:text="@string/TreeScreenInstruction"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -85,10 +87,10 @@
 		android:id="@+id/topGridLayout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-
+		
         android:useDefaultMargins="true"
         android:alignmentMode="alignBounds"
-
+		android:layout_gravity="center_horizontal"
         android:columnCount="2"
         >
         </GridLayout>
@@ -108,19 +110,41 @@
 
         android:useDefaultMargins="true"
         android:alignmentMode="alignBounds"
+        
 
         android:columnCount="2"
         >
         </GridLayout>
+    <LinearLayout  
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="horizontal"
+    android:gravity="end"
+    android:layout_marginTop="20dip" >
+
+        <Button
+                android:id="@+id/btnViewAllConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="35dp"
+                android:text="All Conditions"
+                android:textSize="13sp"
+                android:layout_gravity="right"
+                android:visibility="invisible"
+                 />
         <Button
                 android:id="@+id/btnAddNewPerson"
-                android:layout_alignParentBottom="true"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:minHeight="35dp"
                 android:text="@string/TreeScreenAddButton"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:layout_gravity="right"
+                 />
+        
+        </LinearLayout>
 </LinearLayout>
 
                   </ScrollView>  

@@ -27,17 +27,20 @@ public final class R {
         public static final int female=0x7f020000;
         public static final int ic_launcher=0x7f020001;
         public static final int male=0x7f020002;
-        public static final int person=0x7f020003;
+        public static final int my_med_his=0x7f020003;
+        public static final int person=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f090030;
-        public static final int bottomGridLayout=0x7f090026;
+        public static final int action_settings=0x7f090035;
+        public static final int bottomGridLayout=0x7f090029;
         public static final int btnAdd=0x7f09000d;
         public static final int btnAddNewCondition=0x7f090020;
-        public static final int btnAddNewPerson=0x7f090027;
+        public static final int btnAddNewPerson=0x7f09002b;
         public static final int btnCancel=0x7f09000c;
         public static final int btnDeletePerson=0x7f090021;
         public static final int btnGoToMainScreen=0x7f090022;
+        public static final int btnShare=0x7f090024;
+        public static final int btnViewAllConditions=0x7f09002a;
         public static final int button1=0x7f090019;
         public static final int editTextBirthdate=0x7f090011;
         public static final int editTextCondition=0x7f090005;
@@ -48,14 +51,14 @@ public final class R {
         public static final int imageButton1=0x7f090016;
         public static final int imageButton2=0x7f090017;
         public static final int imageButton3=0x7f090018;
-        public static final int imageButtonDeleteCondition=0x7f09002b;
-        public static final int linearLayout=0x7f09002c;
+        public static final int imageButtonDeleteCondition=0x7f09002f;
+        public static final int linearLayout=0x7f090031;
         public static final int listViewConditions=0x7f09001f;
-        public static final int meContainer=0x7f090025;
-        public static final int personImage=0x7f09002d;
-        public static final int personName=0x7f09002f;
-        public static final int personRelation=0x7f09002e;
-        public static final int personsContainer=0x7f090023;
+        public static final int meContainer=0x7f090028;
+        public static final int personImage=0x7f090032;
+        public static final int personName=0x7f090034;
+        public static final int personRelation=0x7f090033;
+        public static final int personsContainer=0x7f090025;
         public static final int radioFemale=0x7f090014;
         public static final int radioGrpGender=0x7f090012;
         public static final int radioMale=0x7f090013;
@@ -70,31 +73,37 @@ public final class R {
         public static final int textView3=0x7f090007;
         public static final int textView4=0x7f09000a;
         public static final int textViewBirthdate=0x7f09001c;
-        public static final int textViewConditionDescription=0x7f090028;
-        public static final int textViewDateAcquired=0x7f090029;
+        public static final int textViewConditionDescription=0x7f09002c;
+        public static final int textViewConditionDescriptionAndRelationship=0x7f090030;
+        public static final int textViewDateAcquired=0x7f09002d;
         public static final int textViewDetailsPageHeader=0x7f090001;
         public static final int textViewGender=0x7f09001d;
         public static final int textViewName=0x7f09001a;
         public static final int textViewNoConditionsToDisplay=0x7f09001e;
+        public static final int textViewNoConditionsToList=0x7f090023;
         public static final int textViewRelationship=0x7f09001b;
-        public static final int textViewRemarks=0x7f09002a;
-        public static final int topGridLayout=0x7f090024;
+        public static final int textViewRemarks=0x7f09002e;
+        public static final int textViewTreeScreenInstruction=0x7f090026;
+        public static final int topGridLayout=0x7f090027;
     }
     public static final class layout {
         public static final int activity_add_new_condition=0x7f030000;
         public static final int activity_add_new_person=0x7f030001;
         public static final int activity_add_remove=0x7f030002;
         public static final int activity_details=0x7f030003;
-        public static final int activity_tree=0x7f030004;
-        public static final int condition_row_view=0x7f030005;
-        public static final int person_fragment=0x7f030006;
+        public static final int activity_list_all_medical_conditions=0x7f030004;
+        public static final int activity_tree=0x7f030005;
+        public static final int condition_row_view=0x7f030006;
+        public static final int medical_condition_and_relationship_row=0x7f030007;
+        public static final int person_fragment=0x7f030008;
     }
     public static final class menu {
         public static final int add_new_condition=0x7f080000;
         public static final int add_new_person=0x7f080001;
         public static final int add_remove=0x7f080002;
         public static final int details=0x7f080003;
-        public static final int tree=0x7f080004;
+        public static final int list_all_medical_conditions=0x7f080004;
+        public static final int tree=0x7f080005;
     }
     public static final class string {
         public static final int AddNewPersonScreenIncompleteInfoDialog=0x7f050021;
@@ -130,6 +139,7 @@ public final class R {
         public static final int title_activity_add_new_person=0x7f05001f;
         public static final int title_activity_add_remove=0x7f05001a;
         public static final int title_activity_details=0x7f05000f;
+        public static final int title_activity_list_all_medical_conditions=0x7f050022;
         public static final int title_activity_tree=0x7f050001;
     }
     public static final class style {
