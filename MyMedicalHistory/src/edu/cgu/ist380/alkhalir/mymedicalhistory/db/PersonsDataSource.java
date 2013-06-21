@@ -34,6 +34,12 @@ public class PersonsDataSource {
 	
 	public void open() throws SQLException{
 		database = dbHelper.getWritableDatabase();
+
+		// Enable foreign key constraints
+        if (!database.isReadOnly()) {
+        	database.execSQL("PRAGMA foreign_keys = ON;");
+        }
+		
 	}
 	
 	public void close()
@@ -59,6 +65,8 @@ public class PersonsDataSource {
 	
 	public void deletePerson(Person person){
 		long id=person.getId();
+		database.setForeignKeyConstraintsEnabled(true);
+
 	    database.delete(MySQLiteHelper.TABLE_PERSON, MySQLiteHelper.PERSON_COLUMN_ID
 		        + " = " + id, null);
 		    Log.i(PersonsDataSource.class.getName(), "Record : Person with id:" + person.getId() +" was deleted from the DB.");		

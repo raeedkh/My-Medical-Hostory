@@ -33,6 +33,11 @@ public class ConditionsDataSource {
 	
 	public void open() throws SQLException{
 		database = dbHelper.getWritableDatabase();
+        // Enable foreign key constraints
+        if (!database.isReadOnly()) {
+        	database.execSQL("PRAGMA foreign_keys = ON;");
+        }
+		
 	}
 	
 	public void close()

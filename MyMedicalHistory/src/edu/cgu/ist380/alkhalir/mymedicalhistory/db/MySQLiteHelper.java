@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 	
 	private static final String DATABASE_NAME="MyMedicalHistory.db";
-	private static final int DATABASE_VERSION=3;
+	private static final int DATABASE_VERSION=5;
 	public static final String TABLE_PERSON="person";
 	public static final String PERSON_COLUMN_ID="_id";		
 	public static final String PERSON_COLUMN_FIRSTNAME="first_name";
@@ -42,7 +42,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 			+ CONDITION_COLUMN_DESCRIPTION + " text not null," 
 			+ CONDITION_COLUMN_DATEACQUIRED + " text  null," 
 			+ CONDITION_COLUMN_REMARKS + " text null,"
-			+ CONDITION_COLUMN_PERSONID + " integer not null"
+			+ CONDITION_COLUMN_PERSONID + " integer not null,"
+			+ "FOREIGN KEY("+CONDITION_COLUMN_PERSONID+") REFERENCES "+TABLE_PERSON+"("+PERSON_COLUMN_ID+") ON DELETE CASCADE"
 			+ ")";
 	
 	public MySQLiteHelper(Context context)

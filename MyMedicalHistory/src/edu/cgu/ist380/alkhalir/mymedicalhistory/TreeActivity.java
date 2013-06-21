@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Condition;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.ConditionsDataSource;
+import edu.cgu.ist380.alkhalir.mymedicalhistory.db.MySQLiteHelper;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Person;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.PersonsDataSource;
 
@@ -36,6 +37,12 @@ public class TreeActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tree);
+		
+//		ConditionsDataSource conditionsDS=new ConditionsDataSource(this);
+//		conditionsDS.open();
+//		Condition condition = new Condition(); condition.setId(2);
+//		conditionsDS.deleteCondition(condition);
+//		conditionsDS.close();
 		
 		btnViewAllConditions=(Button)findViewById(R.id.btnViewAllConditions);
 

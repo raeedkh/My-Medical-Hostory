@@ -37,6 +37,7 @@ public class DetailsActivity extends Activity {
 	private PersonsDataSource personDS;
 	private ConditionsDataSource conditionsDS;
 	private Context context;
+	private List<Condition> conditionsList;
 	
 
 	@Override
@@ -56,7 +57,7 @@ public class DetailsActivity extends Activity {
 		Log.i(this.getClass().getName(), "Person ID: "+personId);
 		
 		Person person=personDS.getPersonById(personId);
-		List<Condition> conditionsList=conditionsDS.getConditionsForPersonId(personId);
+		conditionsList=conditionsDS.getConditionsForPersonId(personId);
 		Log.i(getClass().getName(), "List size for person ID:" +personId+" is "+ conditionsList.size());
 
 		txtViewName=(TextView)findViewById(R.id.textViewName);
