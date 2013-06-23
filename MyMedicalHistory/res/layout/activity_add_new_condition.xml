@@ -16,7 +16,7 @@
 	        android:layout_height="wrap_content"
 	        android:paddingTop="10dp"
 	        android:paddingLeft="10dp"
-	        android:text="Add a new condition"
+	        android:text="@string/AddNewConditionScreenPageHeader"
 	        android:textStyle="bold" />
     
 	</TableRow>
@@ -38,14 +38,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginTop="5dp"
-        android:text="Condition"
+        android:text="@string/AddNewConditionScreenPageConditionLabel"
          />
 
     <EditText
         android:id="@+id/editTextCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10" 
+        android:labelFor="@+id/textView2"/>
     
 	</TableRow>	
     <TableRow
@@ -59,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginTop="5dp"
-        android:text="Date Acquired"
+        android:text="@string/AddNewConditionScreenPageDateAcquiredLabel"
          />
 
     <EditText
@@ -68,7 +69,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="date"
-        android:layout_gravity="left" >
+        android:layout_gravity="left"
+        android:hint="@string/DateHint" >
 
     </EditText>
     
@@ -85,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginTop="5dp"
-        android:text="Remarks"
+        android:text="@string/AddNewConditionScreenPageRemarksLabel"
          />
 
     <EditText
@@ -109,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:minHeight="35dp"
-                android:text="Cancel"
+                android:text="@string/AddNewConditionScreenPageCancelBtn"
                 android:textSize="13sp" />     
     <Button
                 android:id="@+id/btnAdd"
@@ -117,7 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:minHeight="35dp"
-                android:text="Save"
+                android:text="@string/AddNewConditionScreenPageSaveBtn"
                 android:textSize="13sp" />    
  	</LinearLayout>
 

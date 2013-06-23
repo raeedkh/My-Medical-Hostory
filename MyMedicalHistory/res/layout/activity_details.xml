@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.35"
             android:gravity="right"
-            android:text="Name:" />
+            android:text="@string/DetailsScreenNameLabel" />
 
         <TextView
             android:id="@+id/textViewName"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.35"
             android:gravity="right"
-            android:text="Relationship:" />
+            android:text="@string/DetailsScreenRelationshipLabel" />
 
         <TextView
             android:id="@+id/textViewRelationship"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.35"
             android:gravity="right"
-            android:text="Birthdate:" />
+            android:text="@string/DetailsScreenBirthdateLabel" />
 
         <TextView
             android:id="@+id/textViewBirthdate"
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.35"
             android:gravity="right"
-            android:text="Gender:" />
+            android:text="@string/DetailsScreenGenderLabel" />
 
         <TextView
             android:id="@+id/textViewGender"
@@ -115,21 +115,21 @@
             android:id="@+id/btnAddNewCondition"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:text="New condition"
+            android:text="@string/DetailsScreenNewConditionBtn"
             android:textSize="13sp" />
 
         <Button
             android:id="@+id/btnDeletePerson"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:text="Delete Person"
+            android:text="@string/DetailsScreenNewDeletePersonBtn"
             android:textSize="13sp" />
 
         <Button
             android:id="@+id/btnGoToMainScreen"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:text="Main Screen"
+            android:text="@string/DetailsScreenNewMainScreenBtn"
             android:textSize="13sp" />
         </LinearLayout>
         

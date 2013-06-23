@@ -21,68 +21,7 @@
             android:layout_height="wrap_content"
             android:textSize="16sp" />
         
-        <!--  first row  -->
-        <!-- 
-        <RelativeLayout
-		    android:layout_width="fill_parent"
-		    android:layout_marginTop="20dip"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal" >
-
-
-			 <fragment android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.PersonFragment"
-            android:id="@+id/grandFatherFragment"   
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-			 
-		 	 <fragment android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.PersonFragment"
-            android:id="@+id/grandMotherFragment"   
-             android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />		
-            
-   		</RelativeLayout>
-   		-->
-
-        <!--  second row  -->
-        <!-- 
-        <RelativeLayout
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:layout_marginTop="20dip"
-		    android:orientation="horizontal" >
-	 <fragment android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.PersonFragment"
-            android:id="@+id/fatherFragment"   
-            android:layout_alignParentLeft="true"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-			 
-	 
-	 <fragment android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.PersonFragment"
- 				android:id="@+id/youFragment" 
-			   android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-			    android:layout_toRightOf="@+id/fatherFragment"
-			    android:layout_toLeftOf="@+id/motherFragment"
-			  />
-            
-		     
-		 	 <fragment android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.PersonFragment"
-            android:id="@+id/motherFragment"   
-             android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />	
-		 	 <fragment android:name="edu.cgu.ist380.alkhalir.mymedicalhistory.PersonFragment"
-            android:id="@+id/siblingFragment"   
-             android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />	
-		
-		 	 
-   		</RelativeLayout>
-       --> 	 
+ 	 
 <GridLayout
 		android:id="@+id/topGridLayout"
         android:layout_width="fill_parent"
@@ -129,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minHeight="35dp"
-                android:text="All Conditions"
+                android:text="@string/TreeScreenAllConditionsButton"
                 android:textSize="13sp"
                 android:layout_gravity="right"
                 android:visibility="invisible"

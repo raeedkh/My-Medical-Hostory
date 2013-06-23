@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,8 +46,6 @@ public class PersonFragment extends Fragment {
 			  textViewName.setTag(bundle.getInt("id"));
 			  textViewRelationship.setTag(bundle.getInt("id"));
 			  imageViewIcon.setOnClickListener(personClickedListener);
-			  //textViewName.setOnClickListener(personClickedListener);
-			  //textViewRelationship.setOnClickListener(personClickedListener);			  
 		  }
 		  
 		  linearLayoutPerson.addView(imageViewIcon);
@@ -64,10 +61,8 @@ public class PersonFragment extends Fragment {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				context=getActivity();
 				int i=Integer.parseInt(v.getTag().toString());
-				Log.i(this.getClass().getName(), "Clicked view tag: "+i);
 				Intent intent=new Intent();
 				intent.setClassName(context, "edu.cgu.ist380.alkhalir.mymedicalhistory.DetailsActivity");
 				intent.putExtra("personID", i);

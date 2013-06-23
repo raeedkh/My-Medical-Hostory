@@ -1,22 +1,15 @@
 package edu.cgu.ist380.alkhalir.mymedicalhistory;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Condition;
-import edu.cgu.ist380.alkhalir.mymedicalhistory.db.ConditionsDataSource;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Person;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.PersonsDataSource;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class ConditionAndRelationshipBaseAdapter extends BaseAdapter {

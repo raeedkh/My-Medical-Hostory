@@ -66,7 +66,6 @@ public class ListAllMedicalConditionsActivity extends Activity {
 		
 		conditionDS.open();
 		conditionsList = conditionDS.getAllConditions(); 
-		Log.i(this.getClass().getName(), "ConditionsList size: "+conditionsList.size());
 		conditionDS.close();
 
 		if (conditionsList.isEmpty())

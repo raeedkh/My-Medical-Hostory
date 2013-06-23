@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:gravity="right"
-            android:text="First Name" />
+            android:text="@string/AddNewPersonPageFirstNameLabel" />
 
         <EditText
             android:id="@+id/editTextFirstName"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:gravity="right"
-            android:text="Last Name" />
+            android:text="@string/AddNewPersonPageLastNameLabel" />
 
         <EditText
             android:id="@+id/editTextLastName"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:gravity="right"
-            android:text="Relationship" />
+            android:text="@string/AddNewPersonPageRelationshipLabel" />
 
 	    <Spinner
 	        android:id="@+id/spinnerRelationship"
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:gravity="right"
-            android:text="Birthdate" />
+            android:text="@string/AddNewPersonPageBirthdateLabel" />
 
         <EditText
             android:id="@+id/editTextBirthdate"
@@ -96,6 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dip"
             android:layout_weight="0.7"
+            android:hint="@string/DateHint"
             />
     </LinearLayout>
 
@@ -111,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:gravity="right"
-            android:text="Gender" />
+            android:text="@string/AddNewPersonPageGenderLabel" />
 
         <RadioGroup
             android:id="@+id/radioGrpGender"
@@ -124,13 +125,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Male" />
+                android:text="@string/AddNewPersonPageMaleLabel" />
 
             <RadioButton
                 android:id="@+id/radioFemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Female" />
+                android:text="@string/AddNewPersonPageFemaleLabel" />
         </RadioGroup>
 
     </LinearLayout>
@@ -148,14 +149,14 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:minHeight="35dp"
-                android:text="Cancel"
+                android:text="@string/AddNewPersonPageCancelBtn"
                 android:textSize="13sp" />
     <Button
                 android:id="@+id/btnAdd"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:minHeight="35dp"
-                android:text="Add"
+                android:text="@string/AddNewPersonPageAddBtn"
                 android:textSize="13sp"/>
     
     </LinearLayout>

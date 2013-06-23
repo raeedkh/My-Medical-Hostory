@@ -1,25 +1,20 @@
 package edu.cgu.ist380.alkhalir.mymedicalhistory;
 
-import java.util.ArrayList;
 import java.util.List;
-
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Condition;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.ConditionsDataSource;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Person;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.PersonsDataSource;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -54,11 +49,9 @@ public class DetailsActivity extends Activity {
 		Intent intent=getIntent();
 		Bundle bundle=intent.getExtras();
 		personId=bundle.getInt("personID");
-		Log.i(this.getClass().getName(), "Person ID: "+personId);
 		
 		Person person=personDS.getPersonById(personId);
 		conditionsList=conditionsDS.getConditionsForPersonId(personId);
-		Log.i(getClass().getName(), "List size for person ID:" +personId+" is "+ conditionsList.size());
 
 		txtViewName=(TextView)findViewById(R.id.textViewName);
 		txtViewBirthdate=(TextView)findViewById(R.id.textViewBirthdate);
@@ -120,7 +113,7 @@ public class DetailsActivity extends Activity {
 		if (conditionsList.isEmpty())
 		{
 			txtViewNoConditionsToDisplay=(TextView)findViewById(R.id.textViewNoConditionsToDisplay);
-			txtViewNoConditionsToDisplay.setText("Thre are no conditions to display! Click on Add Condition button to add a new condition.");
+			txtViewNoConditionsToDisplay.setText(R.string.DetailsScreenNoConditionsToDIsplay);
 			txtViewNoConditionsToDisplay.setVisibility(View.VISIBLE);
 		}
 		else
@@ -143,8 +136,8 @@ public class DetailsActivity extends Activity {
 	private void showDeletePersonConfirmationAlert()
 	{
 		new AlertDialog.Builder(context)
-		.setTitle("Delete a Person")
-		.setMessage("Are you sure you want to delete a Person with all his medical conditions")
+		.setTitle(R.string.ShowDeletePersonConfirmationAlertTitle)
+		.setMessage(R.string.ShowDeletePersonConfirmationAlertMessage)
 		.setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_alert))
 		.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 			

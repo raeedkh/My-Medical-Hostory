@@ -37,17 +37,9 @@ public class TreeActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tree);
-		
-//		ConditionsDataSource conditionsDS=new ConditionsDataSource(this);
-//		conditionsDS.open();
-//		Condition condition = new Condition(); condition.setId(2);
-//		conditionsDS.deleteCondition(condition);
-//		conditionsDS.close();
-		
+				
 		btnViewAllConditions=(Button)findViewById(R.id.btnViewAllConditions);
-
 		
-		this.printDBtoLog();
 		LinearLayout personsContainerLineearLayout=(LinearLayout)this.findViewById(R.id.personsContainer);
 		
 		PersonsDataSource personsDS=new PersonsDataSource(this);
@@ -102,7 +94,6 @@ public class TreeActivity extends Activity {
 					fragmentTransaction.add(R.id.topGridLayout, personFragment);
 					if(numberOfGrands%2!=0 && (numberOfGrands-1)==i)
 					{
-						//topGridLayout.addView(space, topGridLayout.getChildCount());
 						fragmentTransaction.add(R.id.topGridLayout, new EmptyFragment());
 					}
 				}
@@ -157,101 +148,4 @@ public class TreeActivity extends Activity {
 		return true;
 	}
 
-	//Method to print DB content to Log
-	public void printDBtoLog()
-	{
-		PersonsDataSource personDS = new PersonsDataSource(this);
-		ConditionsDataSource conditionDS= new ConditionsDataSource(this);
-		
-		personDS.open();
-		conditionDS.open();
-		
-		Log.i(this.getClass().getName(), "Person DB is: "+ personDS);
-		Log.i(this.getClass().getName(), "Condition DB is: "+ conditionDS);		
-		
-		List<Person> persons=personDS.getAllPersons();
-		List<Condition> conditions=conditionDS.getAllConditions();
-		
-		
-		
-		int i=0;
-		while (i<persons.size())
-		{
-			Log.i(this.getClass().getName(), persons.get(i).toString());
-			i++;
-		}
-
-		i=0;
-		while (i<conditions.size())
-		{
-			Log.i(this.getClass().getName(), conditions.get(i).toString());
-			i++;
-		}
-		personDS.close();
-		conditionDS.close();		
-	}
-
-	//Method to insert test data into the DB
-	public void insertTestData()
-	{
-		PersonsDataSource personDS = new PersonsDataSource(this);
-		ConditionsDataSource conditionDS= new ConditionsDataSource(this);
-		
-		personDS.open();
-		conditionDS.open();
-		
-		Log.i(this.getClass().getName(), "Person DB is: "+ personDS);
-		Log.i(this.getClass().getName(), "Condition DB is: "+ conditionDS);		
-		
-		Person testPerson=new Person();
-		testPerson.setBirthDate("04/15/1990");
-		testPerson.setFirstName("Smith");
-		testPerson.setLastName("Junior");
-		testPerson.setRelationship("Sibling");
-		testPerson.setGender("Male");
-		testPerson=personDS.createPerson(testPerson);			
-		
-		Condition testCondition=new Condition();
-		testCondition.setDateAcquired("06/03/2005");
-		testCondition.setDescription("Autism");
-		testCondition.setPersonId(testPerson.getId());
-		testCondition.setRemarks("");
-		testCondition=conditionDS.createCondition(testCondition);
-
-		testPerson=new Person();
-		testPerson.setBirthDate("04/15/1995");
-		testPerson.setFirstName("Laura");
-		testPerson.setLastName("Smith");
-		testPerson.setRelationship("Sibling");
-		testPerson.setGender("Female");
-		testPerson=personDS.createPerson(testPerson);
-
-		testPerson=new Person();
-		testPerson.setBirthDate("02/15/1996");
-		testPerson.setFirstName("Jessica");
-		testPerson.setLastName("Johnson");
-		testPerson.setRelationship("Sibling");
-		testPerson.setGender("Female");
-		testPerson=personDS.createPerson(testPerson);
-
-
-		personDS.close();
-		conditionDS.close();
-		
-	}	
-	
-	private OnClickListener personClickedListener=new OnClickListener() {
-		
-		@Override
-		public void onClick(View v) {
-			// TODO Auto-generated method stub
-			Context context=v.getContext();
-			int i=Integer.parseInt(v.getTag().toString());
-			Log.i(this.getClass().getName(), "Clicked view tag: "+i);
-			Intent intent=new Intent();
-			intent.setClassName(context, "edu.cgu.ist380.alkhalir.mymedicalhistory.DetailsActivity");
-			intent.putExtra("personID", i);
-			context.startActivity(intent);
-		}
-	};
 }

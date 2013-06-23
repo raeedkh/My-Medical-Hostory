@@ -16,6 +16,7 @@
     <string name="TreeScreenSibling3">Sibling3</string>
     <string name="TreeScreenSibling4">Sibling4</string>
     <string name="TreeScreenAddButton">Add Person</string>
+    <string name="TreeScreenAllConditionsButton">All Conditions</string>
     <string name="title_activity_details">Person Details</string>
     <string name="DetailsPageHeader">Grandfather\'s Details</string>
     <string name="DetailsPageFirstCondition">First Condition</string>
@@ -45,5 +46,36 @@
     <string name="relationship_prompt">Select a relationship</string>
     <string name="AddNewPersonScreenIncompleteInfoDialog">Please complete the required fields</string>
     <string name="title_activity_list_all_medical_conditions">All Medical Conditions</string>
-
+    <string name="AddNewConditionScreenPageHeader">Add a new condition</string>
+    <string name="AddNewConditionScreenPageConditionLabel">Condition</string>
+    <string name="AddNewConditionScreenPageDateAcquiredLabel">Date Acquired</string>
+    <string name="DateHint">MM/DD/YYYY</string>
+    <string name="AddNewConditionScreenPageRemarksLabel">Remarks</string>
+    <string name="AddNewConditionScreenPageCancelBtn">Cancel</string>            
+    <string name="AddNewConditionScreenPageSaveBtn">Save</string>    
+    <string name="AddNewPersonPageFirstNameLabel">First Name</string>
+    <string name="AddNewPersonPageLastNameLabel">Last Name</string>
+    <string name="AddNewPersonPageRelationshipLabel">Relationship</string>
+    <string name="AddNewPersonPageBirthdateLabel">Birthdate</string>    
+    <string name="AddNewPersonPageGenderLabel">Gender</string>
+    <string name="AddNewPersonPageMaleLabel">Male</string>
+    <string name="AddNewPersonPageFemaleLabel">Female</string>
+    <string name="AddNewPersonPageCancelBtn">Cancel</string>
+    <string name="AddNewPersonPageAddBtn">Add</string>
+    <string name="DetailsScreenNameLabel">Name:</string>
+    <string name="DetailsScreenRelationshipLabel">Relationship:</string>
+    <string name="DetailsScreenBirthdateLabel">Birthdate:</string>
+    <string name="DetailsScreenGenderLabel">Gender:</string>
+    <string name="DetailsScreenNewConditionBtn">New Condition</string>
+    <string name="DetailsScreenNewMainScreenBtn">Main Screen</string>
+    <string name="DetailsScreenNewDeletePersonBtn">Delete Person</string>
+    <string name="DetailsScreenNoConditionsToDIsplay">No medical conditions recorded for this person! Click on New Condition.</string>
+    <string name="ListAllMedicalConditionsScreenNoConditionsToDisplay">No medical conditions to display!</string>
+    <string name="ListAllMedicalConditionsScreenShareBtn">Share</string>
+    <string name="ListAllMedicalConditionsScreenMainScreen">Main Screen</string>
+    <string name="ShowDeleteConditionConfirmationAlertTitle">Delete a Condition</string>
+    <string name="ShowDeleteConditionConfirmationAlertMessage">Are you sure you want to delete this medical condition?</string>
+    <string name="ShowDeletePersonConfirmationAlertTitle">Delete a Person</string>
+    <string name="ShowDeletePersonConfirmationAlertMessage">Are you sure you want to delete this person with all his medical conditions?</string>
+    
 </resources>

@@ -1,6 +1,5 @@
 package edu.cgu.ist380.alkhalir.mymedicalhistory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.AlertDialog;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Condition;
 import edu.cgu.ist380.alkhalir.mymedicalhistory.db.ConditionsDataSource;
-import edu.cgu.ist380.alkhalir.mymedicalhistory.db.Person;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
@@ -87,8 +85,8 @@ public class ConditionBaseAdapter extends BaseAdapter {
 		{
 			clickedImageButton=(ImageButton)v;
 			new AlertDialog.Builder(context)
-			.setTitle("Delete a Condtion")
-			.setMessage("Are you shure you want to delete this Condition?")
+			.setTitle(R.string.ShowDeleteConditionConfirmationAlertTitle)
+			.setMessage(R.string.ShowDeleteConditionConfirmationAlertMessage)
 			.setIcon(v.getContext().getResources().getDrawable(android.R.drawable.ic_dialog_alert))
 			.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 				
