@@ -36,7 +36,7 @@ public class TreeActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_tree);
+		setContentView(R.layout.activity_tree);				
 				
 		btnViewAllConditions=(Button)findViewById(R.id.btnViewAllConditions);
 		
